@@ -1,7 +1,106 @@
-/* You can delete / re-write this img class  */
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
 
-img {
-    max-width: 200px;
 }
 
-/* Happy coding! */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.card {
+    cursor: pointer;
+    z-index: 1;
+    width: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card--light {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+.card--light .card__feature {
+    background-color: gold;
+}
+
+.card--dark {
+    background-color: darkslategrey;
+    color: white;
+    border: 2px dashed red;
+}
+
+.card--dark .card__feature {
+    background-color: red;
+}
+
+.card__image {
+    max-width: 100%;
+    max-height: 460px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.card__feature {
+
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 16px;
+
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.card__feature::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    left: 3px;
+    content: "";
+
+    border-radius: 20px;
+}
+
+.card--light .card__feature::after {
+    background-color: goldenrod;
+}
+
+.card--dark .card__feature::after {
+    background-color: brown;
+}
+
+
+/* Стили для медиа-запросов */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
