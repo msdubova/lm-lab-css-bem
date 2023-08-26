@@ -63,7 +63,7 @@ h1 {
 
     display: inline-block;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 12px;
 
     border-radius: 20px;
     padding: 10px;
@@ -103,4 +103,37 @@ h1 {
         width: 80%;
         margin-bottom: 20px;
     }
+}
+
+.card__button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    transform: scale(1.1);
+    transition: 0.3ms;
+}
+
+.card__button--danger {
+    background-color: black;
+    color: white;
+}
+
+.card__button--danger:hover {
+    box-shadow: red 0 0 300px;
+}
+
+.card__button--opposite:hover {
+    box-shadow: gold 0 0 300px;
+}
+
+.card__button--opposite {
+    background-color: skyblue;
+    color: white;
 }
